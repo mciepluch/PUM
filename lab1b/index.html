@@ -24,17 +24,17 @@
       context.fillStyle = colorArray[color_index];
       context.fill();
 
-    //   var changeColor2 = setInterval(function() {
-    //     color_index++;
-    //     color_index = color_index%2;
-    //     context.fillStyle = colorArray[color_index];
-    //     context.fill();
-    //   }, 1000)
+      var changeColor_1 = setInterval(function() {
+        color_index++;
+        color_index = color_index%2;
+        context.fillStyle = colorArray[color_index];
+        context.fill();
+      }, 1000)
 
       var green=0;
       var changeColor=1;
 
-      var changeColor = setInterval(function() {
+      var changeColor_2 = setInterval(function() {
         green += changeColor === 1 ? 1 : 0
             
         context.fillStyle = `rgb(0, ${green}, ${255-green})`;
@@ -42,7 +42,7 @@
 
         changeColor = (changeColor+1)%2
       }, 1)
-      changeColor();
+      changeColor_2();
 
     //   var centerX2 = canvas.width / 3;
     //   var centerY2 = canvas.height / 3;
