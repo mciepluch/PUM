@@ -17,10 +17,23 @@
       var centerY = canvas.height / 2;
       var radius = 70;
 
+      var color_index = 0
+
+      var colorArray = ['green', 'blue']
+      var changeColor = setInterval(function() {
+        color_index++;
+        color_index = color_index%2;
+        context.fillStyle = colorArray[color_index];
+        context.fill();
+      }, 1000)
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'green';
+      context.fillStyle = colorArray[color_index];
       context.fill();
+      
+      changeColor();
+
+
     </script>
   </body>
 </html> 
